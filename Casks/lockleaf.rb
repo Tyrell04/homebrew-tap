@@ -1,9 +1,9 @@
 cask "lockleaf" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.1.0"
-  sha256 arm:   "a8e2fbda2b977e8fd07bc006178ecabdc77399de9f55dc1c51078d83bd36179f",
-         intel: "6d92fe9d25938a13089f90c0480d8f56342629a1ffe0643d4b366dd21393eb17"
+  version "0.1.1"
+  sha256 arm:   "68b0bbff74de5f5dc9bd94caf9c5181355e17b382d5457a1da1c205f0ea46d4a",
+         intel: "163d200fbb277b98a7802301162001df4c0776e9be9cde92de5d85d1a10c4b10"
 
   url "https://github.com/Tyrell04/Lockleaf/releases/download/v#{version}/Lockleaf_#{version}_#{arch}.dmg"
   name "Lockleaf"
@@ -16,9 +16,8 @@ cask "lockleaf" do
 
   caveats <<~EOS
     Lockleaf is not signed or notarized by Apple. Gatekeeper will refuse to
-    open it unless it was installed with:
-      brew install --cask --no-quarantine Tyrell04/tap/lockleaf
-    or the quarantine flag is removed after install:
+    open it unless the quarantine flag is removed after install:
       xattr -dr com.apple.quarantine /Applications/Lockleaf.app
+    (On Homebrew 5 or older you can instead install with --no-quarantine.)
   EOS
 end
