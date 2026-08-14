@@ -1,9 +1,9 @@
 cask "lockleaf" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.1.1"
-  sha256 arm:   "68b0bbff74de5f5dc9bd94caf9c5181355e17b382d5457a1da1c205f0ea46d4a",
-         intel: "163d200fbb277b98a7802301162001df4c0776e9be9cde92de5d85d1a10c4b10"
+  version "0.2.0"
+  sha256 arm:   "8da9b4acd6466922d9250ccbce1d05c6ff9f381afda4b83d790481a3126999d7",
+         intel: "08578d17b40af3185f6a660d6f1c049653a7e367d2e31a8b4e086d513a2973e3"
 
   url "https://github.com/Tyrell04/Lockleaf/releases/download/v#{version}/Lockleaf_#{version}_#{arch}.dmg"
   name "Lockleaf"
